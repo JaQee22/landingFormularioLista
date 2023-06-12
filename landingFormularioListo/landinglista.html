@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page JaQee</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="textos-hero">
+            <h1>Bienvenidas a CamilaDennise Peluqueria</h1>
+            <p>Realza tu belleza y sientete más espectacular que nunca con nuestros servicios de peluqueria</p>
+            <a href="#contacto">Registro</a>
+        </div>
+        <div class="svg-hero" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" 
+                style="height: 100%; width: 100%;">
+                <path d="M-0.00,50.10 C162.90,247.21 349.20,-50.10 500.00,50.10 L500.00,150.33 L-0.00,150.33 Z" 
+                style="stroke: none; fill: #fff;"></path>
+            </svg></div>
+    </header>
+
+    <section class="wave-contenedor website">
+        <img src="img/fondo2.jpg" alt="">
+        <div class= "contenedor-textos-main">
+            <h2 class="titulo left">La Belleza en tu Cabello</h2>
+            <p class="parrafo">En nuestra peluquería, ofrecemos una amplia variedad de servicios para ayudarte a conseguir el look que siempre haz deseado. Desde cortes de cabello modernos y elegantes hasta peinados para eventos especiales, decoloraciones y masajes.</p>
+        </div>
+    </section>
+
+    <section class="info">
+        <div class="contenedor">
+            <h2 class="titulo left">haz tu cita hoy mismo</h2>
+            <p>Registrate y obten tu codigo para un 15% de dcto. en tu primera cita.</p>
+            <!-- <a href="#contacto">Registrate</a> -->
+        </div>
+    </section>
+
+    <section class="cards contenedor">
+        <h2 class="titulo">Nuestros servicios</h2>
+        <div class="content-cards">
+            <article class="card">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <h3>Coloracion</h3>
+                <p>Expertas en colorimetria, tu cabello en las mejores manos .</p>
+            </article>
+            <article class="card">
+                <i class="fa-solid fa-users"></i>
+                <h3>Cortes y Peinados</h3>
+                <p> El corte de cabello y peinado que tu quieras.</p>
+            </article>
+            <article class="card">
+                <i class="fa-solid fa-money-bill"></i>
+                <h3>A tu Alcance</h3>
+                <p>Con los mejores Precios del Mercado.</p>
+            </article>
+        </div>
+    </section>
+
+    <section class="galeria">
+        <div class="contenedor">
+            <h2 class="titulo">Nuestros Trabajos</h2>
+            <article class="galeria-cont">
+                <img src="img/img3.png" alt="">
+                <img src="img/img2.png" alt="">
+                <img src="img/img4.png" alt="">
+                <img src="img/img34.jpg" alt="">
+                <img src="img/img12.png" alt="">
+                <img src="img/img10.png" alt="">
+                <img src="img/img9.png" alt="">
+                <img src="img/img8.png" alt="">
+            </article>
+        </div>    
+    </section>
+
+    <section class="info-last">
+        <div class="contenedor last-section">
+            <div class="contenedor-textos-main">
+                <h2 class="titulo left">Registrate</h2>
+                <p class="parrafo">Registrate obten tu codigo de descuentos para utilizar en tu primera cita.</p>
+                <a href="" class="cta">Inicio</a>
+            </div>
+            <img src="img/imglogo.png" alt="">
+        </div>
+    </section>
+    
+        <div class="svg-wave" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" 
+            style="height: 100%; width: 100%;">
+            <path d="M-0.00,50.10 C162.90,247.21 349.20,-50.10 500.00,50.10 L500.00,150.33 L-0.00,150.33 Z" 
+            style="stroke: none; fill: #f5576c;"></path>
+        </svg></div>
+
+    <footer id="contacto">
+        <div class="contenedor">
+            <h2 class="titulo">Obten tu codigo de Descuento.</h2>
+            <table>
+            <tbody>
+                <form class="custom-form" id="formulario">
+                    <h1 id="ins">Registrarse</h1>
+            <!-- nombres -->
+                    <tr><td> <div class="form-group">
+                        <label for="nombre">Nombres</label>
+                        <input type="text" class="form-group" id="nombre" placeholder="Ingrese Nombres" required>
+                    </div></td></tr>
+            <!-- apellidos -->
+                    <tr><td><div class="form-group">
+                        <label for="apellido">Apellidos</label>
+                        <input type="text" class="form-group" id="apellido" placeholder="Ingrese Apellidos" required>
+                    </div></td></tr>
+            <!-- fecha de nacimiento -->
+                    <tr><td><div class="form-group">
+                        <label for="fecha">Fecha de Nacimiento</label>
+                        <input type="date" class="form-group" id="fecha">
+                    </div></td></tr>
+            
+            <!-- telefono -->
+                    <tr><td><div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <label for="telefono">Teléfono de Contacto</label>
+                                <input type="cod" class="input-group-prepend" id="codigoArea" placeholder="+569" size="2" required>
+                                <input type="tel" class="form-control" id="telefono" placeholder="Ingrese Telefono" required>
+                            </div>
+                        </div>
+                    </div><br></td></tr>
+            <!-- enviar -->
+                    <tr><td><button input class="input" type="button" onclick="validarFormulario()" class="btn btn-primary">Enviar</button></td></tr>
+                    
+                </form>
+            </tbody>
+            </table>
+            <h1>Registros:</h1>
+            <div id="personas"></div>
+            
+            </div>
+                
+            <script src="script/formulario.js"></script>
+            
+    </footer>
+
+
+    <script src="https://kit.fontawesome.com/642fd7705b.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
