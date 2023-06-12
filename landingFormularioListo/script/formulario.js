@@ -84,7 +84,7 @@ function validarFormulario(){
   document.getElementById('telefono').value = '';
   document.getElementById('codigoArea').value = '';
   // document.getElementById('codigoDescuento').value = '';
-  window.alert('Se ha guardado el registro de ' + persona["nombre completo"]());
+  window.alert('Se ha guardado Exitosamente el registro de ' + persona["nombre completo"]());
   document.getElementById('personas').innerHTML = personasHTML;
 }
 
