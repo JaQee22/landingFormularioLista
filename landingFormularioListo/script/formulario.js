@@ -12,8 +12,9 @@ function validarFormulario(){
   var FechaNacimiento = document.getElementById("fecha").value;
   var telefono = document.getElementById("telefono").value;
   var codigo = document.getElementById("codigoArea").value;
+  var email = document.getElementById("email").value;
 
-  if (nombre === "" || apellido === "" || FechaNacimiento === "" || telefono === "") {
+  if (nombre === "" || apellido === "" || FechaNacimiento === "" || telefono === "" || email === "") {
     alert("Todos los campos son obligatorios");
     return false;
   }
@@ -37,6 +38,12 @@ function validarFormulario(){
     return;
   }
 
+  var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.([a-zA-Z]{2,4})+$/
+  if (!email.match(emailRegex)) {
+    alert("Por favor, ingrese un email válido.");
+    return;
+  }
+
   var codigoDescuento = Math.floor(Math.random() * 1000000000).toString().padStart(9, "0");
   window.alert("Su código de descuento es: " + codigoDescuento);
   formulario.style.display = "none";
@@ -48,6 +55,7 @@ function validarFormulario(){
       fechaNacimiento: FechaNacimiento,
       telefono: telefono,
       codigoArea: codigo,
+      email: email,
       codigoDescuento: codigoDescuento,
       "nombre completo": function () { return this.nombre + ' ' + this.apellido; },
       "telefono completo": function () { return this.codigoArea + ' ' + this.telefono; }
@@ -62,6 +70,7 @@ function validarFormulario(){
   personasHTML += '<th>nombre</th>\n';
   personasHTML += '<th>fechaNacimiento</th>\n';
   personasHTML += '<th>telefono</th>\n';
+  personasHTML += '<th>email</th>\n';
   personasHTML += '<th>codigoDescuento</th>\n';
   personasHTML += '</tr>\n';
   personasHTML += '</thead>\n';
@@ -71,6 +80,7 @@ function validarFormulario(){
       personasHTML += '<td>' + personas[i]['nombre completo']() + '</td>\n';
       personasHTML += '<td>' + personas[i]['fechaNacimiento'] + '</td>\n';
       personasHTML += '<td>' + personas[i]['telefono completo']() + '</td>\n';
+      personasHTML += '<td>' + personas[i]['email'] + '</td>\n';
       personasHTML += '<td>' + personas[i]['codigoDescuento'] + '</td>\n';
       personasHTML += '</tr>\n';
   }
@@ -82,7 +92,9 @@ function validarFormulario(){
   document.getElementById('apellido').value = '';
   document.getElementById('fecha').value = '';
   document.getElementById('telefono').value = '';
+  document.getElementById('email').value = '';
   document.getElementById('codigoArea').value = '';
+  
   // document.getElementById('codigoDescuento').value = '';
   window.alert('Se ha guardado Exitosamente el registro de ' + persona["nombre completo"]());
   document.getElementById('personas').innerHTML = personasHTML;
